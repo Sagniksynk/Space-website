@@ -12,7 +12,7 @@ const Destination = () => {
 
 	const [activeDestination, setactiveDestination] = useState(0);
 	const planetUrls = [
-		"https://prod.spline.design/HIfW0Nr0f3iEY2OU/scene.splinecode",
+		"https://prod.spline.design/IqBmzcCXJlAsz4lP/scene.splinecode",
 		"https://prod.spline.design/CJ4YWQN7V3rHnGsp/scene.splinecode",
 		"https://prod.spline.design/g2ItcebU0x09DTq9/scene.splinecode",
 		"https://prod.spline.design/C0PUeEQqghNmB8Do/scene.splinecode",
@@ -39,7 +39,7 @@ const Destination = () => {
 							src="https://unpkg.com/@splinetool/viewer@1.0.93/build/spline-viewer.js"
 						></script>
 					</Helmet>
-					<div className=" h-[40vh] md:h-[300px] aspect-square mx-auto mt-8 mb-5 sm:my-14">
+					<div className=" h-[40vh] md:h-[500px] aspect-square mx-auto mt-8 mb-5 sm:my-14">
 						<spline-viewer
 							key={activeDestination}
 							loading-anim-type="none"
@@ -86,7 +86,19 @@ const Destination = () => {
 												.travel
 										}
 									</span>
+									
 								</div>
+								<div className="my-8">
+									<h4 className="font-barlow text-secondary text-sm tracking-[2.36px] mb-3">
+										Radius
+									</h4>
+									<span className="font-bellefair text-[28px] uppercase">
+										{
+											data.destinations[activeDestination]
+												.radius
+										}
+									</span>
+									</div>
 							</div>
 						</div>
 					</div>
